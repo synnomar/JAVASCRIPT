@@ -1,6 +1,10 @@
 //IEE 754-2008
 
-let num1 = 0.7; //number
+let num1 = 75;
+console.log(num1 ** (0.5)) 
+
+
+/*let num1 = 0.7; //number
 let num2 = 0.1; //number
 
 num1+= num2; //0.8
@@ -32,5 +36,5 @@ console.log(Number.isInteger(num1));
 //let temp = num1 * 'Ola'; //NaN Not a Number
 //console.log(temp); //NaN
 //console.log(typeof temp); //number
-//console.log(Number.isNaN(temp)); //true
+//console.log(Number.isNaN(temp)); //true*/
 
