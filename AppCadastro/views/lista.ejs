@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Usuários</title>
+    <style>
+        body { font-family: sans-serif; margin: 20px; background-color: #f4f4f9; }
+        table { width: 100%; border-collapse: collapse; background: white; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #007bff; color: white; }
+        tr:nth-child(even) { background-color: #f2f2f2; }
+        .btn-voltar { display: inline-block; margin-bottom: 15px; padding: 10px; background: #6c757d; color: white; text-decoration: none; border-radius: 4px; }
+    </style>
+</head>
+<body>
+    <h2>Clientes Cadastrados</h2>
+    <a href="/" class="btn-voltar">← Novo Cadastro</a>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>CPF</th>
+                <th>Cidade/Bairro</th>
+                <th>Plano</th>
+                <th>Valor</th>
+                <th>Velocidade</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% usuarios.forEach(user => { %>
+                <tr>
+                    <td><%= user.nome %></td>
+                    <td><%= user.cpf %></td>
+                    <td><%= user.cidade %> - <%= user.bairro %></td>
+                    <td><%= user.plano %></td>
+                    <td>R$ <%= user.valor.toFixed(2) %></td>
+                    <td><%= user.velocidade %></td>
+                    <td>
+                        <a href="/editar/<%= user.id %>" style="color: #007bff; text-decoration: none; margin-right: 10px;">✏️ Editar</a>
+                        <a href="/excluir/<%= user.id %>" style="color: #dc3545; text-decoration: none;" onclick="return confirm('Tem certeza que deseja excluir?')">🗑️ Excluir</a>
+                    </td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+</body>
+</html>
