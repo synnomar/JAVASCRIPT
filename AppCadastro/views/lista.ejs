@@ -38,8 +38,8 @@
                     <td>R$ <%= user.valor.toFixed(2) %></td>
                     <td><%= user.velocidade %></td>
                     <td>
-                        <a href="/editar/<%= user.id %>" style="color: #007bff; text-decoration: none; margin-right: 10px;">✏️ Editar</a>
-                        <a href="/excluir/<%= user.id %>" style="color: #dc3545; text-decoration: none;" onclick="return confirm('Tem certeza que deseja excluir?')">🗑️ Excluir</a>
+                    <a href="/editar/<%= user.id %>" style="color: #007bff; text-decoration: none; margin-right: 10px;">✏️ Editar</a>
+                    <a href="/excluir/<%= user.id %>" style="color: #dc3545; text-decoration: none;" onclick="return confirm('Tem certeza que deseja excluir?')">🗑️ Excluir</a>
                     </td>
                 </tr>
             <% }); %>
